@@ -1,0 +1,2 @@
+[global.databases]
+mysql_db = { url = "mysql://username:password@localhost:3306/databasename" }
