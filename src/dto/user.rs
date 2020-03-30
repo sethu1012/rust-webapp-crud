@@ -3,7 +3,9 @@ use serde::{Serialize, Deserialize};
 #[derive(FromForm, Serialize, Deserialize, Debug)]
 pub struct User {
     id: Option<u32>,
-    name: String
+    name: String,
+    email: String,
+    password: String
 }
 
 impl User {
@@ -16,5 +18,13 @@ impl User {
 
     pub fn get_name(&self) -> &String {
         &self.name
+    }
+
+    pub fn get_email(&self) -> &String {
+        &self.email
+    }
+
+    pub fn get_password(&self) -> &String {
+        &self.password
     }
 }
