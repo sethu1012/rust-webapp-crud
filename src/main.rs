@@ -1,4 +1,3 @@
-#![allow(dead_code)]
 #![feature(proc_macro_hygiene, decl_macro)]
 
 #[macro_use] 
@@ -25,7 +24,8 @@ fn main() {
             users::ping,
             users::test,
             users::create_user,
-            users::form_user
+            users::form_user,
+            users::login
         ])
         .attach(DbConn::fairing())
         .launch();
